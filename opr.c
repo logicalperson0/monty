@@ -47,7 +47,7 @@ void push(stack_t **stk, unsigned int x)
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	glo.lens++;
+	lens++;
 }
 
 /**

@@ -1,6 +1,9 @@
 #ifndef _monty_h_
 #define _monty_h_
 
+#define _POSIX_C_SOURCE  200809L
+#define _GNU_SOURCE
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -15,10 +18,10 @@
 * struct vari_s - struct to contain the global variables
 * @lens: length of stack
 */
-typedef struct vari_s
+/*typedef struct vari_s
 {
 	size_t lens;
-} vari_t;
+} v;*/
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -50,7 +53,8 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern vari_t glo;
+extern size_t lens;
+size_t lens;
 
 /* doubly linked list to add elements to the stack*/
 stack_t *addto_stack(stack_t **h, const int x);
