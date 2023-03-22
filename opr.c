@@ -35,7 +35,7 @@ void push(stack_t **stk, unsigned int x)
 	char *args;
 	int n;
 
-	args = strtok(NULL, "\n");
+	args = strtok(NULL, "\n\t ");
 	if (args == NULL || _digit(args))
 	{
 		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", x);

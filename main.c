@@ -9,7 +9,7 @@
  */
 int main(int ac, char *av[])
 {
-	FILE *fd;
+	FILE *fd = NULL;
 	size_t buff = 0;
 	ssize_t nlin = 0;
 	char *line = NULL, *opr = NULL;
@@ -38,7 +38,7 @@ int main(int ac, char *av[])
 	while (nlin != -1)
 	{
 		num++;
-		opr = strtok(line, "\n");
+		opr = strtok(line, "\n\t\r ");
 		if (opr != NULL && opr[0] != '#')
 			chk_func(opr, &list, num);
 	}
