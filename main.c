@@ -11,7 +11,6 @@ int main(int ac, char *av[])
 {
 	FILE *fd = NULL;
 	size_t buff = 0;
-	ssize_t nlin = 0;
 	char *line = NULL, *opr = NULL;
 	unsigned int num = 0;
 	stack_t *list = NULL;
@@ -34,8 +33,7 @@ int main(int ac, char *av[])
 	on_exit(free_list, &list);
 	on_exit(closing, fd);
 
-	nlin = getline(&line, &buff, fd);
-	while (nlin != -1)
+	while (getline(&line, &buff, fd) != -1)
 	{
 		num++;
 		opr = strtok(line, "\n\t\r ");
