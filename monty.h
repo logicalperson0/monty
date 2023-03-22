@@ -16,12 +16,21 @@
 
 /**
 * struct vari_s - struct to contain the global variables
+* @qu: queue type
 * @lens: length of stack
 */
-/*typedef struct vari_s
+typedef struct vari_s
 {
+	int qu;
 	size_t lens;
-} v;*/
+} v;
+
+#define STA 0
+#define QUE 1
+
+/*global variable*/
+extern v glo;
+v glo;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -52,9 +61,6 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
-extern size_t lens;
-size_t lens;
 
 /* doubly linked list to add elements to the stack*/
 stack_t *addto_stack(stack_t **h, const int x);

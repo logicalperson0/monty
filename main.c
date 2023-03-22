@@ -15,7 +15,7 @@ int main(int ac, char *av[])
 	unsigned int num = 0;
 	stack_t *list = NULL;
 
-	lens = 0;
+	glo.lens = 0;
 
 	if (ac != 2)
 	{

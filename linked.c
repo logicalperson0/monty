@@ -31,7 +31,7 @@ stack_t *addto_stack(stack_t **h, const int x)
 		(*h)->prev = add;
 		add->next = *h;
 	}
-	if (lens == 0)
+	if (glo.qu == STA || glo.lens == 0)
 		*h = add;
 	return (add);
 }

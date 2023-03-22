@@ -39,7 +39,7 @@ void free_list(int stat, void *av)
 		*h = (*h)->next;
 		free(del);
 	}
-	lens = 0;
+	glo.lens = 0;
 }
 
 /**
