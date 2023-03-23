@@ -66,7 +66,7 @@ void _add(stack_t **stk, unsigned int x)
 
 	if (glo.lens < 2)
 	{
-		dprintf(STDERR_FILENO, "L%u: can't add, stack too short", x);
+		dprintf(STDERR_FILENO, "L%u: can't add, stack too short\n", x);
 		exit(EXIT_FAILURE);
 	}
 	add += (*stk)->n;
