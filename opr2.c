@@ -10,9 +10,9 @@ void _pop(stack_t **stk, unsigned int x)
 	stack_t *del;
 	
 	del = *stk;
-	if (glo.lens == 0)
+	if (*stk == NULL)
 	{
-		dprintf(STDERR_FILENO, "L%u: can't pop an empty stack", x);
+		dprintf(STDERR_FILENO, "L%u: can't pop an empty stack\n", x);
 		exit(EXIT_FAILURE);
 	}
 	(*stk)->next->prev = (*stk)->prev;
