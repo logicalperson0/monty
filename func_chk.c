@@ -12,6 +12,7 @@ void chk_func(char *opr, stack_t **head, unsigned int n)
 	instruction_t oprs[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 

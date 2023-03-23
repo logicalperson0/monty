@@ -51,6 +51,26 @@ void push(stack_t **stk, unsigned int x)
 }
 
 /**
+ * _pint - func that prints value at top of stack
+ * @stk: ptr to ptr to head
+ * @x: line num of opr in the file
+ */
+void _pint(stack_t **stk, unsigned int x)
+{
+	stack_t *s;
+
+	s = *stk;
+
+	if (*stk == NULL)
+	{
+		dprintf(STDERR_FILENO, "L%u: can't pint, stack empty", x);
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", s->n);
+
+}
+
+/**
  * _digit - chk if digit is an int
  * @stk: ptr to ptr to head
  * Return: 0 for success, 1 otherwise
