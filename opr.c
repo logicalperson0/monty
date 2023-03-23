@@ -61,9 +61,9 @@ void _pint(stack_t **stk, unsigned int x)
 
 	s = *stk;
 
-	if (glo.lens == 0)
+	if (*stk == NULL)
 	{
-		dprintf(STDERR_FILENO, "L%u: can't pint, stack empty", x);
+		dprintf(STDERR_FILENO, "L%u: can't pint, stack empty\n", x);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", s->n);
