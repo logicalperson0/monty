@@ -15,6 +15,7 @@ void chk_func(char *opr, stack_t **head, unsigned int n)
 		{"pint", _pint},
 		{"pop", _pop},
 		{"swap", _swap},
+		{"add", _add},
 		{NULL, NULL}
 	};
 

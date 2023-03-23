@@ -54,3 +54,24 @@ void _swap(stack_t **stk, unsigned int x)
 	sp->next = *stk;
 	*stk = sp;
 }
+
+/**
+ * _add - func that adds the top two elements of the stack
+ * @stk: ptr to ptr to stack
+ * @x: line in the file
+ */
+void _add(stack_t **stk, unsigned int x)
+{
+	int add = 0;
+
+	if (glo.lens < 2)
+	{
+		dprintf(STDERR_FILENO, "L%u: can't add, stack too short", x);
+		exit(EXIT_FAILURE);
+	}
+	add += (*stk)->n;
+
+	_pop(stk, x);
+	
+	(*stk)->n += add;
+}
