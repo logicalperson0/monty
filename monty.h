@@ -75,6 +75,7 @@ void _pint(stack_t **stk, unsigned int x);
 void _pop(stack_t **stk, unsigned int x);
 void _swap(stack_t **stk, unsigned int x);
 void _add(stack_t **stk, unsigned int x);
+void _nop(stack_t **stk, unsigned int x);
 
 /* frees the line in file, frees stack, and closes the file*/
 void free_line(int stat, void *av);

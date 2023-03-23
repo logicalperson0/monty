@@ -72,6 +72,17 @@ void _add(stack_t **stk, unsigned int x)
 	add += (*stk)->n;
 
 	_pop(stk, x);
-	
+
 	(*stk)->n += add;
+}
+
+/**
+ * _nop - func that doesn’t do anything
+ * @stk: ptr to ptr to stack
+ * @x: line in the file
+ */
+void _nop(stack_t **stk, unsigned int x)
+{
+	UNUSED(stk);
+	UNUSED(x);
 }
