@@ -72,6 +72,7 @@ void chk_func(char *opr, stack_t **head, unsigned int n);
 void pall(stack_t **stk, unsigned int x);
 void push(stack_t **stk, unsigned int x);
 void _pint(stack_t **stk, unsigned int x);
+void _pop(stack_t **stk, unsigned int x);
 
 /* frees the line in file, frees stack, and closes the file*/
 void free_line(int stat, void *av);
