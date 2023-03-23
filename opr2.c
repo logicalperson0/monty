@@ -10,7 +10,7 @@ void _pop(stack_t **stk, unsigned int x)
 	stack_t *del;
 	
 	del = *stk;
-	if (*stk == NULL)
+	if (glo.lens == 0)
 	{
 		dprintf(STDERR_FILENO, "L%u: can't pop an empty stack", x);
 		exit(EXIT_FAILURE);
