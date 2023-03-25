@@ -18,6 +18,7 @@ void chk_func(char *opr, stack_t **head, unsigned int n)
 		{"add", _add},
 		{"nop", _nop},
 		{"sub", _sub},
+		{"div", div_},
 		{NULL, NULL}
 	};
 

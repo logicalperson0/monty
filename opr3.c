@@ -20,3 +20,28 @@ void _sub(stack_t **stk, unsigned int x)
 
 	(*stk)->n -= sub;
 }
+
+/**
+ * div_ - func that divides the second top element of the stack
+ * by the top element of the stack.
+ * @stk: ptr to ptr to stack
+ * @x: line in the file
+ */
+void div_(stack_t **stk, unsigned int x)
+{
+	int div = 0;
+	if (glo.lens < 2)
+	{
+		dprintf(STDERR_FILENO, "L%u: can't div, stack too short\n", x);
+		exit(EXIT_FAILURE);
+	}
+	if ((*stk)->n == 0)
+	{
+		dprintf(STDERR_FILENO, "L%u: division by zero\n", x);
+		exit(EXIT_FAILURE);
+	}
+	div += (*stk)->n;
+	_pop(stk, x);
+
+	(*stk)->n /= div;
+}
