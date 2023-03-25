@@ -56,3 +56,23 @@ void _pstr(stack_t **stri, unsigned int l)
 		putchar('\n');
 	}
 }
+
+/**
+ * r_rotl - rotates the stack to the top.
+ * top element of the stack becomes the last one
+ * @stk: prt to ptr to stack
+ * @l: line in the file
+ */
+void r_rotl(stack_t **stk, unsigned int l)
+{
+	stack_t *sec;
+
+	UNUSED(l);
+
+	if (*stk)
+	{
+		sec = (*stk)->next;
+
+		*stk = sec;
+	}
+}
