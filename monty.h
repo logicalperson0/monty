@@ -90,6 +90,7 @@ void _mod(stack_t **stk, unsigned int x);
 void _pchar(stack_t ** chari, unsigned int l);
 void _pstr(stack_t ** stri, unsigned int l);
 void r_rotl(stack_t **stk, unsigned int l);
+void r_rotr(stack_t **stk, unsigned int l);
 
 /* frees the line in file, frees stack, and closes the file*/
 void free_line(int stat, void *av);

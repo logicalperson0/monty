@@ -76,3 +76,18 @@ void r_rotl(stack_t **stk, unsigned int l)
 		*stk = sec;
 	}
 }
+
+/**
+ * r_rotr - rotates the stack to the bottom.
+ * @stk: prt to ptr to stack
+ * @l: line in the file
+ */
+void r_rotr(stack_t **stk, unsigned int l)
+{
+	stack_t *rot = *stk;
+
+	UNUSED(l);
+
+	if (*stk)
+		*stk = rot->prev;
+}

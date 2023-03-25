@@ -24,6 +24,7 @@ void chk_func(char *opr, stack_t **head, unsigned int n)
 		{"pchar", _pchar},
 		{"pstr", _pstr},
 		{"rotl", r_rotl},
+		{"rotr", r_rotr},
 		{NULL, NULL}
 	};
 
