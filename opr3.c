@@ -67,3 +67,29 @@ void multi(stack_t **stk, unsigned int x)
 
 	(*stk)->n *= mulx;
 }
+
+/**
+ * _mod - func that computes the rest of the division of the second
+ * top element of the stack by the top element of the stack
+ * @stk: ptr to ptr to stack
+ * @x: line in the file
+ */
+void _mod(stack_t **stk, unsigned int x)
+{
+	int modx = 0;
+
+	if (glo.lens < 2)
+	{
+		dprintf(STDERR_FILENO, "L%u: can't mod, stack too short\n", x);
+		exit(EXIT_FAILURE);
+	}
+	if ((*stk)->n == 0)
+	{
+		dprintf(STDERR_FILENO, "L%u: division by zero\n", x);
+		exit(EXIT_FAILURE);
+	}
+	modx += (*stk)->n;
+	_pop(stk, x);
+
+	(*stk)->n %= modx;
+}

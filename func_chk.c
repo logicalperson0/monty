@@ -20,6 +20,7 @@ void chk_func(char *opr, stack_t **head, unsigned int n)
 		{"sub", _sub},
 		{"div", div_},
 		{"mul", multi},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
