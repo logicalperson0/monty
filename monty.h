@@ -68,20 +68,25 @@ stack_t *addto_stack(stack_t **h, const int x);
 /*checks the opcode arg and calls a func ptr to the valid opcode*/
 void chk_func(char *opr, stack_t **head, unsigned int n);
 
-/* opcode functions*/
+/* opcode functions: opr*/
 void pall(stack_t **stk, unsigned int x);
 void push(stack_t **stk, unsigned int x);
 void _pint(stack_t **stk, unsigned int x);
-void _pop(stack_t **stk, unsigned int x);
 
+/*opcode functions: opr2*/
+void _pop(stack_t **stk, unsigned int x);
 void _swap(stack_t **stk, unsigned int x);
 void _add(stack_t **stk, unsigned int x);
 void _nop(stack_t **stk, unsigned int x);
-void _sub(stack_t **stk, unsigned int x);
 
+/*opcode functions: opr3*/
+void _sub(stack_t **stk, unsigned int x);
 void div_(stack_t **stk, unsigned int x);
 void multi(stack_t **stk, unsigned int x);
 void _mod(stack_t **stk, unsigned int x);
+
+/*opcode functions: opr4*/
+void _pchar(stack_t ** chari, unsigned int l);
 
 /* frees the line in file, frees stack, and closes the file*/
 void free_line(int stat, void *av);
