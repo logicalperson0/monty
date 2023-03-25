@@ -15,8 +15,13 @@ void _pchar(stack_t ** chari, unsigned int l)
 		dprintf(STDERR_FILENO, "L%u: can't pchar, stack empty\n", l);
 		exit(EXIT_FAILURE);
 	}
-	tra = (*chari)->prev;
-	i = tra->n;
+	if (glo.lens == 1)
+		i = (*chari)->n;
+	else if (glo.lens > 1)
+	{
+		tra = (*chari)->prev;
+		i = tra->n;
+	}
 	
 	if ((i >= 65 && i <= 90) || (i >= 97 && i <= 122))
 	{
