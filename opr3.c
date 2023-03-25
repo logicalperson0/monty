@@ -30,6 +30,7 @@ void _sub(stack_t **stk, unsigned int x)
 void div_(stack_t **stk, unsigned int x)
 {
 	int div = 0;
+
 	if (glo.lens < 2)
 	{
 		dprintf(STDERR_FILENO, "L%u: can't div, stack too short\n", x);
@@ -44,4 +45,25 @@ void div_(stack_t **stk, unsigned int x)
 	_pop(stk, x);
 
 	(*stk)->n /= div;
+}
+
+/**
+ * multi - func that multiplies the second top element of the stack
+ * with the top element of the stack
+ * @stk: ptr to ptr to stack
+ * @x: line in the file
+ */
+void multi(stack_t **stk, unsigned int x)
+{
+	int mulx = 0;
+
+	if (glo.lens < 2)
+	{
+		dprintf(STDERR_FILENO, "L%u: can't mul, stack too short\n", x);
+		exit(EXIT_FAILURE);
+	}
+	mulx += (*stk)->n;
+	_pop(stk, x);
+
+	(*stk)->n *= mulx;
 }

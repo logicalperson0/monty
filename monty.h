@@ -80,6 +80,7 @@ void _nop(stack_t **stk, unsigned int x);
 void _sub(stack_t **stk, unsigned int x);
 
 void div_(stack_t **stk, unsigned int x);
+void multi(stack_t **stk, unsigned int x);
 
 /* frees the line in file, frees stack, and closes the file*/
 void free_line(int stat, void *av);
