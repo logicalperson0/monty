@@ -22,6 +22,7 @@ void chk_func(char *opr, stack_t **head, unsigned int n)
 		{"mul", multi},
 		{"mod", _mod},
 		{"pchar", _pchar},
+		{"pstr", _pstr},
 		{NULL, NULL}
 	};
 
